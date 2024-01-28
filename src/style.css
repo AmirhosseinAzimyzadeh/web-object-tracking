@@ -94,3 +94,20 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.video-container {
+  position: relative;
+}
+
+.video-container video {
+  border-radius: 10px;
+  box-shadow: 0 0 2em #000000aa;
+}
+
+.video-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+}
