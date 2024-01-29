@@ -14,7 +14,7 @@ function main() {
   parent.classList.add('video-container');
   parent.appendChild(video);
   parent.appendChild(canvas);
-  document.getElementById('app').appendChild(parent);
+  document.getElementById('app')!.appendChild(parent);
 
   initiateTracker().then((tracker: handPoseDetection.HandDetector | null) => {
     if (tracker === null) return;

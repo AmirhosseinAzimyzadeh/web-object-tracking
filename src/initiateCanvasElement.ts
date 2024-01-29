@@ -1,7 +1,5 @@
 // This function will not add the element to the DOM
-export default function initiateCanvasElement(
-  drawAfter?: (canvas: HTMLCanvasElement) => void
-): [HTMLCanvasElement, HTMLVideoElement] {
+export default function initiateCanvasElement(): [HTMLCanvasElement, HTMLVideoElement] {
   const canvasElement = document.createElement('canvas');
   const videoElement = document.createElement('video');
   canvasElement.width = 640;
@@ -22,7 +20,7 @@ export default function initiateCanvasElement(
     });
 
     const frameHandler = () => {
-      const context = canvasElement.getContext('2d');
+      const context = canvasElement.getContext('2d')!;
       // flip image horizontally
       context.scale(-1, 1);
       requestAnimationFrame(frameHandler);
