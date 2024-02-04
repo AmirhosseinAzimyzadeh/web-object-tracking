@@ -1,5 +1,5 @@
 // This function will not add the element to the DOM
-export default function initiateCanvasElement(): [HTMLCanvasElement, HTMLVideoElement] {
+export default function createMediaElements(): [HTMLCanvasElement, HTMLVideoElement] {
   const canvasElement = document.createElement('canvas');
   const videoElement = document.createElement('video');
   canvasElement.width = 640;
